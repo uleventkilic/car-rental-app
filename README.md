@@ -1,53 +1,53 @@
-# 🚗 Car Rental App - Araç Kiralama Sistemi
+# 🚗 Car Rental App 
 
-Bu proje, kullanıcıların araç kiralayabileceği, araçları listeleyebileceği ve ofisler arasında karşılaştırma yapabileceği bir web uygulamasıdır.
+This project is a web application where users can rent vehicles, list available cars, and compare offices.
 
 ---
 
-## 🎥 Video Tanıtımı
+## 🎥 Video Demo
 
 [Car Rental App Demo](https://youtu.be/JIPjPz7okjQ)
 
 ---
 
-## 📌 Proje Özellikleri
+## 📌 Project Features
 
-- ✅ Kullanıcı kaydı ve giriş sistemi (JWT Authentication)
-- ✅ Araç kiralama ve listeleme
-- ✅ Ofis bazlı araç karşılaştırmaları
-- ✅ Responsive frontend tasarımı (React.js)
-- ✅ Node.js + Express.js ile güçlü backend
-- ✅ MongoDB ile veri depolama
+- ✅ User registration and login system (JWT Authentication)
+- ✅ Vehicle rental and listing
+- ✅ Office-based vehicle comparisons
+- ✅ Responsive frontend design (React.js)
+- ✅ Powerful backend with Node.js + Express.js
+- ✅ Data storage with MongoDB
 
 ---
 
-## 📂 Proje Yapısı
+## 📂 Project Structure
 
 ```plaintext
 car-rental-app/
 │-- car-rental-frontend/  # React.js Frontend
 │-- car-rental-backend/   # Node.js & Express.js Backend
-│-- models/               # MongoDB Şema Modelleri
-│-- routes/               # API Rotaları
-│-- server.js             # Backend Ana Dosyası
-│-- .env                  # Çevresel Değişkenler
+│-- models/               # MongoDB Schema Models
+│-- routes/               # API Routes
+│-- server.js             # Backend Main File
+│-- .env                  # Environment Variables
 ```
 
 ---
 
-## 🛠 Kurulum Talimatları
+## 🛠 Installation Instructions
 
-### 1️⃣ Gerekli Bağımlılıkları Yükleme
+### 1️⃣ Install Dependencies
 
-Projeyi klonladıktan sonra backend ve frontend bağımlılıklarını yükleyin:
+After cloning the project, install the backend and frontend dependencies:
 
 ```bash
-git clone https://github.com/kullaniciadi/car-rental-app.git
+git clone https://github.com/username/car-rental-app.git
 cd car-rental-app
 npm install
 ```
 
-Frontend bağımlılıklarını yüklemek için:
+To install frontend dependencies:
 
 ```bash
 cd car-rental-frontend
@@ -56,9 +56,9 @@ npm install
 
 ---
 
-### 2️⃣ .env Dosyasını Ayarlama
+### 2️⃣ Setting Up the .env File
 
-`.env` dosyanızın içeriği şu şekilde olmalıdır:
+Your `.env` file should contain the following:
 
 ```env
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/car-rental
@@ -66,11 +66,11 @@ JWT_SECRET=your_secret_key_here
 PORT=5000
 ```
 
-MongoDB URI ve JWT_SECRET değerlerini kendi bilgilerinizle değiştirin.
+Replace the MongoDB URI and JWT_SECRET values with your actual credentials.
 
 ---
 
-### 3️⃣ Backend'i Çalıştırma
+### 3️⃣ Running the Backend
 
 ```bash
 cd car-rental-app
@@ -79,47 +79,49 @@ npm start
 
 ---
 
-### 4️⃣ Frontend'i Çalıştırma
+### 4️⃣ Running the Frontend
 
 ```bash
 cd car-rental-frontend
 npm start
 ```
 
-Uygulama şu adreslerde çalışacaktır:
+The application will run at:
 
 - **Frontend:** http://localhost:3000  
 - **Backend:** http://localhost:5000  
 
 ---
 
-## 📌 API Kullanımı
+## 📌 API Usage
 
-### 🔐 Kimlik Doğrulama Rotaları
+### 🔐 Authentication Routes
 
-- `POST /api/auth/register` → Kullanıcı kaydı
-- `POST /api/auth/login` → Kullanıcı girişi
+- `POST /api/auth/register` → User registration
+- `POST /api/auth/login` → User login
 
-### 🚗 Araç Rotaları
+### 🚗 Vehicle Routes
 
-- `GET /api/cars` → Tüm araçları listele
-- `POST /api/cars` → Yeni araç ekle
-- `GET /api/cars/:id` → Belirli bir aracı getir
-- `DELETE /api/cars/:id` → Aracı sil
+- `GET /api/cars` → List all vehicles
+- `POST /api/cars` → Add a new vehicle
+- `GET /api/cars/:id` → Retrieve a specific vehicle
+- `DELETE /api/cars/:id` → Delete a vehicle
 
-### 🏢 Ofis Rotaları
+### 🏢 Office Routes
 
-- `GET /api/offices` → Tüm ofisleri listele
-- `POST /api/offices` → Yeni ofis ekle
-- `GET /api/offices/:id` → Belirli bir ofisi getir
+- `GET /api/offices` → List all offices
+- `POST /api/offices` → Add a new office
+- `GET /api/offices/:id` → Retrieve a specific office
 
 ---
 
 
-## 🔥 Geliştirme Süreci
+## 🔥 Development Process
 
-Bu proje aşağıdaki teknolojiler kullanılarak geliştirilmiştir:
+This project was developed using the following technologies:
 
 - **Frontend:** React.js, Axios, React Router
 - **Backend:** Express.js, JWT, Mongoose, Bcrypt
-- **Veritabanı:** MongoDB
+- **Database:** MongoDB
+
+---
