@@ -6,7 +6,7 @@ Bu proje, kullanıcıların araç kiralayabileceği, araçları listeleyebilece�
 
 ## 🎥 Video Tanıtımı
 
-[![Car Rental App Demo](https://youtu.be/JIPjPz7okjQ)
+[Car Rental App Demo](https://youtu.be/JIPjPz7okjQ)
 
 ---
 
