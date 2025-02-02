@@ -2,7 +2,7 @@
 
 This project is a web application where users can rent vehicles, list available cars, and compare offices.
 
-[![Demo Video](https://www.youtube.com/watch?v=JShFPJBYvBA)
+[Demo Video](https://www.youtube.com/watch?v=JShFPJBYvBA)
 
 
 ## 📌 Project Features
