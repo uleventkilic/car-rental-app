@@ -1,131 +1,176 @@
-# 🚗 Car Rental App - Vehicle Rental System
+# Car Rental Web Application
 
-This project is a web application where users can rent vehicles, list available cars, and compare offices.
+## 📌 About the Project
+This project is a web application where users can rent cars. Users can search for vehicles using different filters, list available cars, make reservations, and create user accounts to log in. Additionally, Google OAuth integration allows for quick sign-in.
+
+The project is developed using **React (frontend)** and **Node.js (backend)**. **MongoDB** is used as the database, and **Multer** is utilized for file uploads related to car images.
 
 [Demo Video](https://www.youtube.com/watch?v=JShFPJBYvBA)
 
+---
 
-## 📌 Project Features
+## 🚀 Getting Started
 
-- ✅ User registration and login system (JWT Authentication)
-- ✅ Vehicle rental and listing
-- ✅ Office-based vehicle comparisons
-- ✅ Responsive frontend design (React.js)
-- ✅ Powerful backend with Node.js + Express.js
-- ✅ Data storage with MongoDB
+### Requirements
+To run this project, you need to have the following installed on your computer:
+- **Node.js**: Download and install the latest LTS version from the [Node.js website](https://nodejs.org/).
+- **MongoDB**: You can install MongoDB locally or use MongoDB Atlas.
 
 ---
 
-## 📂 Project Structure
+## 🛠️ Technologies
 
-```plaintext
-car-rental-app/
-│-- car-rental-frontend/  # React.js Frontend
-│-- car-rental-backend/   # Node.js & Express.js Backend
-│-- models/               # MongoDB Schema Models
-│-- routes/               # API Routes
-│-- server.js             # Backend Main File
-│-- .env                  # Environment Variables
-```
+### Frontend:
+- React.js
+- React Router
+- Axios (for API requests)
+- **SCSS** (for styling)
+
+### Backend:
+- Node.js
+- Express.js (server framework)
+- MongoDB (database)
+- Mongoose (MongoDB interaction)
+- bcryptjs (password encryption)
+- Multer (file uploads)
+
+### Other:
+- Google OAuth (for Google login)
 
 ---
 
-## 🛠 Installation Instructions
+## 📥 Installation
 
-### 1️⃣ Install Dependencies
+### 1. Backend Setup
+Follow these steps to set up the backend:
 
-After cloning the project, install the backend and frontend dependencies:
+Clone the repository to your computer:
 
 ```bash
-git clone https://github.com/username/car-rental-app.git
+git clone https://github.com/your-username/car-rental-app.git
 cd car-rental-app
+```
+
+Navigate to the backend directory:
+
+```bash
+cd backend
+```
+
+Install the required dependencies:
+
+```bash
 npm install
 ```
 
-To install frontend dependencies:
+Create a **.env** file and configure the necessary settings, such as database connection:
 
 ```bash
-cd car-rental-frontend
+DB_URI=mongodb://localhost:27017/car_rental
+JWT_SECRET=your_jwt_secret_key
+```
+
+Start the server:
+
+```bash
+npm run start
+```
+
+The server will run at **http://localhost:5000**.
+
+### 2. Frontend Setup
+To set up the frontend:
+
+Navigate to the frontend directory:
+
+```bash
+cd frontend
+```
+
+Install the required dependencies:
+
+```bash
 npm install
 ```
 
----
-
-### 2️⃣ Setting Up the .env File
-
-Your `.env` file should contain the following:
-
-```env
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/car-rental
-JWT_SECRET=your_secret_key_here
-PORT=5000
-```
-
-Replace the MongoDB URI and JWT_SECRET values with your actual credentials.
-
----
-
-### 3️⃣ Running the Backend
+Start the application:
 
 ```bash
-cd car-rental-app
-npm start
+npm run dev
 ```
 
+The frontend will run at **http://localhost:5173**.
+
 ---
 
-### 4️⃣ Running the Frontend
+## 🛠️ Usage
 
-```bash
-cd car-rental-frontend
-npm start
+### 1. Home Page
+- **Language Selection:** Users can switch between "EN" and "TR" languages.
+- **Car Search:** Users can search for cars based on brand, model, price, etc.
+- **Map and Office List:** The locations of available rental offices are displayed on a map.
+
+### 2. Car Listing and Filtering
+Users can search for cars using the following filters:
+- **Brand:** Search for cars by brand.
+- **Price:** Sort cars by daily rental price (ascending or descending).
+- **Transmission Type:** Filter cars based on manual or automatic transmission.
+
+### 3. User Registration and Login
+- **Sign Up:** New users can register by providing an email, password, first name, last name, city, and country.
+- **Google Login:** Users can quickly sign in using Google OAuth.
+- **Password Login:** Users can log in with their email and password.
+
+### 4. Car Rental
+- Users can select a rental office and reserve cars for specific rental dates.
+
+---
+
+## 📄 API Usage
+
+The backend provides the following API endpoints:
+
+### **POST /api/users/register**
+Registers a new user.
+
+#### Request Body:
+```json
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe@example.com",
+    "password": "password123",
+    "country": "Turkey",
+    "city": "Izmir"
+}
 ```
 
-The application will run at:
+### **POST /api/users/login**
+Logs in a user.
 
-- **Frontend:** http://localhost:3000  
-- **Backend:** http://localhost:5000  
+#### Request Body:
+```json
+{
+    "email": "johndoe@example.com",
+    "password": "password123"
+}
+```
 
----
+### **POST /api/cars/add**
+Adds a new car.
 
-## 📌 API Usage
-
-### 🔐 Authentication Routes
-
-- `POST /api/auth/register` → User registration
-- `POST /api/auth/login` → User login
-
-### 🚗 Vehicle Routes
-
-- `GET /api/cars` → List all vehicles
-- `POST /api/cars` → Add a new vehicle
-- `GET /api/cars/:id` → Retrieve a specific vehicle
-- `DELETE /api/cars/:id` → Delete a vehicle
-
-### 🏢 Office Routes
-
-- `GET /api/offices` → List all offices
-- `POST /api/offices` → Add a new office
-- `GET /api/offices/:id` → Retrieve a specific office
-
----
-
-## 🎥 Video Demo
-
-[![Car Rental App Demo](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
-
----
-
-## 🔥 Development Process
-
-This project was developed using the following technologies:
-
-- **Frontend:** React.js, Axios, React Router
-- **Backend:** Express.js, JWT, Mongoose, Bcrypt
-- **Database:** MongoDB
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License. For more details, see the `LICENSE` file.
+#### Request Body:
+```json
+{
+    "brand": "BMW",
+    "model": "320i",
+    "year": 2022,
+    "transmission": "Automatic",
+    "deposit": 5000,
+    "mileage": 30000,
+    "minAge": 21,
+    "dailyPrice": 1800,
+    "location": "Istanbul",
+    "image": "/images/bmw_320i.png"
+}
+```
